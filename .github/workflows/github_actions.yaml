@@ -12,7 +12,7 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v4
 
-      - name: Log in to docker hub
+      - name: Log into docker hub
         run:  echo ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
 
       - name: Build docker image
